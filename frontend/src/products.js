@@ -57,7 +57,7 @@ const products = [
     category: 'shoes',
     price: '3999',
     countInStock: 18,
-    rating: 4.9,
+    rating: 5,
     numReviews: 59,
   },
 ]
