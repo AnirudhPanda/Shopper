@@ -9,3 +9,22 @@ h3 {
 .rating span {
   margin: 0.1rem;
 }
+
+.image {
+  border-radius: 8px;
+}
+
+.btn-check:active + .btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-primary.active,
+.btn-primary:active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #787fee;
+}
+
+.btn:active,
+.btn:active:focus,
+.btn:focus,
+.btn:hover {
+  color: rgb(0, 0, 0);
+}

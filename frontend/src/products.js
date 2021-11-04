@@ -7,7 +7,7 @@ const products = [
     brand: 'Bag Brand',
     category: 'bags',
     price: '999',
-    countInStock: 4,
+    countInStock: 0,
     rating: 4,
     numReviews: 5,
   },

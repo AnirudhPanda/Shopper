@@ -13,6 +13,7 @@ function App() {
       <main className='py-3'>
         <Container>
           <Route path='/' component={HomeScreen} exact />
+          {/* this id is checked at ProductScreen.js for matching one by one */}
           <Route path='/product/:id' component={ProductScreen} />
         </Container>
       </main>
