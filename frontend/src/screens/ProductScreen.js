@@ -1,12 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+// import { Link } from 'react-router-dom'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../components/Rating'
-import products from '../products'
 
 const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id) // match params checks id using Array,prototype.find() in JS
+  // const product = products.find((p) => p._id === match.params.id) // match params checks id using Array,prototype.find() in JS
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    axios
+      .get(`/api/products/${match.params.id}`)
+      .then((res) => {
+        setProduct(res.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }, [match])
+
   return (
     <>
       <LinkContainer to='/'>

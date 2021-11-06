@@ -1,8 +1,22 @@
-import React from 'react'
-import products from '../products'
+import React, { useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap'
 import Product from '../components/Product'
+import axios from 'axios'
 const HomeScreen = () => {
+  const [products, setProducts] = useState([])
+  // useEffect hook to request data from backend and in useEffect whatever we put inside the arrow fn is gonna run as soon as the component loads
+  // we use that here bcoz we want the products as soon as our HomeScreen loads
+  useEffect(() => {
+    axios
+      .get('/api/products')
+      .then((res) => {
+        setProducts(res.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }, [])
+
   return (
     <>
       <h1>Latest Products</h1>

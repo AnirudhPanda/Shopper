@@ -1,0 +1,30 @@
+{
+  "name": "shopper",
+  "version": "1.0.0",
+  "description": "Cheap and affordable shopping web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/serve",
+    "server": "nodemon backend/server",
+    "client" : "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnirudhPanda/Shopper.git"
+  },
+  "author": "Anirudh Panda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnirudhPanda/Shopper/issues"
+  },
+  "homepage": "https://github.com/AnirudhPanda/Shopper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  }
+}
